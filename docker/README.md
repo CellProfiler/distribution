@@ -13,7 +13,13 @@ Dockerfile:
 
     ARG version=3.0.0
 
-To push to docker hub, follow instructions at https://docs.docker.com/docker-cloud/builds/push-images/
+To push to docker hub, do the following (look up instructions at https://docs.docker.com/docker-cloud/builds/push-images/ for details)
+
+    $ export DOCKER_ID_USER="username" # replace with your Docker Hub username 
+    $ export VERSION=3.0.0
+    $ docker login
+    $ docker tag cellprofiler:3.0.0 ${DOCKER_ID_USER}/cellprofiler:${VERSION} 
+    $ docker push ${DOCKER_ID_USER}/cellprofiler:${VERSION} 
 
 On a Linux host machine, running CellProfiler's GUI from the container:
 
