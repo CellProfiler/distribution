@@ -44,9 +44,9 @@ input/filelist.txt: data
 
 .PHONY: clean
 clean:
-	rm -r input
-	rm -r output
-	rm master.zip
+	rm -rf input
+	rm -rf output
+	rm -f master.zip
 
 .PHONY: test
 test: input output output/gold data input/filelist.txt AS_09125_050116030001_D03f00d0_Overlay.png
