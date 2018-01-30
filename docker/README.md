@@ -22,7 +22,7 @@ You can do this using `sed`
 To push to docker hub, do the following (look up instructions at https://docs.docker.com/docker-cloud/builds/push-images/ for details)
 
     $ export DOCKER_ID_USER="username" # replace with your Docker Hub username 
-    $ export VERSION=3.0.0
+    $ export VERSION=3.0.0 # replace with the version you are building
     $ docker login
     $ docker tag cellprofiler:3.0.0 ${DOCKER_ID_USER}/cellprofiler:${VERSION} 
     $ docker push ${DOCKER_ID_USER}/cellprofiler:${VERSION} 
