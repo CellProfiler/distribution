@@ -12,6 +12,12 @@ Makefile:
 Dockerfile:
 
     ARG version=3.0.0
+    
+You can do this using `sed` 
+    
+    $ export VERSION=2.2.1
+    $ sed -i s,"ARG version=3.0.0","ARG version=${VERSION}",g Dockerfile
+    $ sed -i s,"VERSION := 3.0.0","VERSION := ${VERSION}",g Makefile
 
 To push to docker hub, do the following (look up instructions at https://docs.docker.com/docker-cloud/builds/push-images/ for details)
 
