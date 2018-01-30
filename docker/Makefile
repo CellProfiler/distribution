@@ -10,7 +10,8 @@ TAG := latest
 
 .DEFAULT_GOAL: build
 build:
-	docker build -t cellprofiler:$(TAG) --build-arg version=$(VERSION) .
+	docker build -t cellprofiler:$(VERSION) --build-arg version=$(VERSION) .
+	docker tag cellprofiler:$(VERSION) cellprofiler:$(VERSION)
 
 .PHONY: input
 input:
