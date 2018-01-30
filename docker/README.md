@@ -1,7 +1,10 @@
 Testing docker locally:
 
     make
+    make clean
     make test
+
+Note: `make test` will work only for CellProfiler 3.3.0 and higher because the example pipeline in the test is not backward compatible.
 
 This is configured to build a docker image for `3.0.0`. To build a different version, edit these lines:
 
