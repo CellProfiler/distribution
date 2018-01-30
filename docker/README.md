@@ -13,7 +13,7 @@ Dockerfile:
 
     ARG version=3.0.0
     
-You can do this using `sed` 
+You can do this using `sed` e.g.
     
     $ export VERSION=2.2.1
     $ sed -i s,"ARG version=3.0.0","ARG version=${VERSION}",g Dockerfile
