@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/CellProfiler/docker.svg?branch=master)](https://travis-ci.org/CellProfiler/docker)
-
 Testing docker locally:
 
     make
