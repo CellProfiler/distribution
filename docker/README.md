@@ -38,4 +38,4 @@ On a Linux host machine, running CellProfiler's GUI from the container:
 
     # Note, the following line is insecure.
     xhost +local:root
-    docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro cellprofiler:latest ""
+    VERSION=3.0.0 docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro cellprofiler:${VERSION} ""
