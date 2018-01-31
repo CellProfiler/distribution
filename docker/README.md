@@ -22,6 +22,8 @@ You can do this using `sed` e.g.
     $ sed -i s,"ARG version=3.0.0","ARG version=${VERSION}",g Dockerfile
     $ sed -i s,"VERSION := 3.0.0","VERSION := ${VERSION}",g Makefile
 
+Note: the sed commands above are for GNU sed. If you're on OS X, see [this](https://stackoverflow.com/questions/30003570/how-to-use-gnu-sed-on-mac-os-x).
+
 To push to docker hub, do the following (look up instructions at https://docs.docker.com/docker-cloud/builds/push-images/ for details)
 
     $ export DOCKER_ID_USER="username" # replace with your Docker Hub username 
