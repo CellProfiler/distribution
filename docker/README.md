@@ -1,3 +1,5 @@
+Authors: [@purohit](https://github.com/purohit), [@mcquin](https://github.com/mcquin), [@0x00b1](https://github.com/0x00b1)
+
 Testing docker locally:
 
     make
