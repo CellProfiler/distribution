@@ -37,7 +37,7 @@ RUN pip install --editable .
 # Fix init and zombie process reaping problems using s6 overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v1.21.2.2/s6-overlay-amd64.tar.gz /tmp/
 
-RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C /
+RUN tar -xzf /tmp/s6-overlay-amd64.tar.gz -C /
 
 ENTRYPOINT ["/init", "cellprofiler"]
 
