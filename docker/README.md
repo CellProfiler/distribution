@@ -18,7 +18,7 @@ You can do this using `sed` e.g.
 
 Note: the sed commands above are for GNU sed. If you're on OS X, see [this](https://stackoverflow.com/questions/30003570/how-to-use-gnu-sed-on-mac-os-x).
 
-To build and testing docker locally:
+To build and test docker locally:
 
     make
     make clean
