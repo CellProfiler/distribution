@@ -31,7 +31,7 @@ By default, s6 logging is output to stdout. To change this behavior, [set the en
     docker run -e S6_LOGGING=1 cellprofiler:${VERSION}
 
 
-To push to docker hub, do the following (look up instructions at https://docs.docker.com/docker-cloud/builds/push-images/ for details)
+To push to docker hub, do the following (look up instructions [here](https://docs.docker.com/docker-cloud/builds/push-images/) for details)
 
     export DOCKER_ID_USER="username" # replace with your Docker Hub username 
     export VERSION=3.0.0 # replace with the version you are building
