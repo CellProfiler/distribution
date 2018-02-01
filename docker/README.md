@@ -26,6 +26,11 @@ To build and testing docker locally:
 
 Note: `make test` will work only for CellProfiler 3.3.0 and higher because the example pipeline in the test is not backward compatible.
 
+By default, s6 logging is output to stdout. To change this behavior, [set the environment variable](https://github.com/just-containers/s6-overlay#customizing-s6-behaviour) `S6_LOGGING` e.g.:
+
+    docker run -e S6_LOGGING=1 cellprofiler:${VERSION}
+
+
 To push to docker hub, do the following (look up instructions at https://docs.docker.com/docker-cloud/builds/push-images/ for details)
 
     export DOCKER_ID_USER="username" # replace with your Docker Hub username 
@@ -33,8 +38,8 @@ To push to docker hub, do the following (look up instructions at https://docs.do
     docker login
     docker tag cellprofiler:${VERSION}  ${DOCKER_ID_USER}/cellprofiler:${VERSION} 
     docker push ${DOCKER_ID_USER}/cellprofiler:${VERSION} 
-
-On a Linux host machine, running CellProfiler's GUI from the container:
+    
+ On a Linux host machine, running CellProfiler's GUI from the container:
 
     # Note, the following line is insecure.
     xhost +local:root
