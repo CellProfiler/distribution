@@ -16,7 +16,10 @@ RUN apk add --no-cache --virtual=.build-dependencies build-base git && \
     apk add --no-cache bash openjdk8                                && \
     ln -s /usr/lib/jvm/java-1.8-openjdk/bin/javac /usr/bin/javac    && \
     conda env create -f environment.yml                             && \
-    apk del --purge .build-dependencies
+    apk del --purge .build-dependencies                             && \
+    rm -rf /var/cache/apk/*                                         && \
+    rm -rf /tmp/*                                                   && \
+    rm -rf /root/.cache/pip
 
 ENV PATH /opt/conda/envs/cellprofiler/bin:$PATH
 ENTRYPOINT ["/bin/bash", "-c"]
