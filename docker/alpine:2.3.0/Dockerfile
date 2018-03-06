@@ -1,4 +1,4 @@
-# docker build -t cellprofiler:2.2.2 .
+# docker build -t cellprofiler:2.3.0 .
 # docker run -it IMAGE_ID "cellprofiler --run-headless --pipeline PIPELINE"
 #
 # Conda is a requirement for installing vigra: https://ukoethe.github.io/vigra/
@@ -23,4 +23,3 @@ RUN apk add --no-cache --virtual=.build-dependencies build-base git && \
 
 ENV PATH /opt/conda/envs/cellprofiler/bin:$PATH
 ENTRYPOINT ["/bin/bash", "-c"]
-CMD ["cellprofiler --help"]
