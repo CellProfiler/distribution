@@ -1,4 +1,3 @@
-
 FROM ubuntu:16.04
 
 ARG version=4.0.1
@@ -29,5 +28,3 @@ RUN python3.8 -m pip install cellprofiler==$version
 ENTRYPOINT ["cellprofiler"]
 
 CMD ["--run", "--run-headless", "--help"]
-
-
