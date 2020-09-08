@@ -26,9 +26,7 @@ RUN rm wxPython-4.1.0-cp38-cp38-linux_x86_64.whl
 # Install CellProfiler
 RUN python3.8 -m pip install cellprofiler==$version
 
-WORKDIR /usr/local/src
-RUN mkdir init
-ENTRYPOINT ["/init", "cellprofiler"]
+ENTRYPOINT ["cellprofiler"]
 
 CMD ["--run", "--run-headless", "--help"]
 
