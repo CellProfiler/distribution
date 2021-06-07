@@ -23,11 +23,13 @@ DisableProgramGroupPage=yes
 LicenseFile=..\..\LICENSE
 OutputBaseFilename=CellProfiler-Windows-{#MyAppVersion}
 SetupIconFile=..\..\cellprofiler\data\icons\CellProfiler.ico
+UninstallDisplayIcon={app}\cellprofiler\data\icons\CellProfiler.ico
 Compression=lzma
 SolidCompression=yes
 DisableDirPage=no
 ChangesEnvironment=yes
 ChangesAssociations=yes
+WizardStyle=modern
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
