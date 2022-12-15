@@ -12,7 +12,7 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python3.8 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --upgrade pip
-RUN pip install wheel cython numpy
+RUN pip install wheel cython numpy attrdict
 
 RUN pip install  -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04 wxPython==4.2.0
 
