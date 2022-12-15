@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ARG version=4.2.3
+ARG version=4.2.5
 
 RUN apt update
 RUN apt -y upgrade
@@ -14,7 +14,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --upgrade pip
 RUN pip install wheel cython numpy
 
-RUN pip install  -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04 wxPython==4.1.0
+RUN pip install  -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04 wxPython==4.2.0
 
 RUN pip install cellprofiler==$version
 
