@@ -19,7 +19,6 @@ datas += PyInstaller.utils.hooks.collect_data_files("cellprofiler")
 datas += PyInstaller.utils.hooks.collect_data_files("javabridge")
 datas += PyInstaller.utils.hooks.collect_data_files("prokaryote")
 datas += PyInstaller.utils.hooks.collect_data_files("skimage.io._plugins")
-datas += PyInstaller.utils.hooks.collect_data_files("scipy.libs")
 
 datas += [
     ("../../cellprofiler/data/images/*", "cellprofiler/data/images"),
@@ -48,6 +47,7 @@ hiddenimports += PyInstaller.utils.hooks.collect_submodules("sentry_sdk.integrat
 
 hiddenimports += [
     "scipy._lib.messagestream",
+	"scipy.libs",
     "pywt._extensions._cwt",
     "sklearn.utils.sparsetools",
 	"sentry_sdk",
