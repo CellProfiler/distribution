@@ -45,6 +45,7 @@ hiddenimports += PyInstaller.utils.hooks.collect_submodules("sentry_sdk.integrat
 
 hiddenimports += [
     "scipy._lib.messagestream",
+	"scipy._lib.openblas",
     "pywt._extensions._cwt",
     "sklearn.utils.sparsetools",
 	"sentry_sdk",
