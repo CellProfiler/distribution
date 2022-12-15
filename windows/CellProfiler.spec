@@ -7,6 +7,8 @@ import PyInstaller.compat
 import PyInstaller.utils.hooks
 
 binaries = []
+binaries += PyInstaller.utils.hooks.collect_dynamic_libs("scipy")
+binaries += PyInstaller.utils.hooks.collect_dynamic_libs("scipy.libs")
 
 block_cipher = None
 
@@ -45,7 +47,6 @@ hiddenimports += PyInstaller.utils.hooks.collect_submodules("sentry_sdk.integrat
 
 hiddenimports += [
     "scipy._lib.messagestream",
-	"scipy._lib.openblas",
     "pywt._extensions._cwt",
     "sklearn.utils.sparsetools",
 	"sentry_sdk",
