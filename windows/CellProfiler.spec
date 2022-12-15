@@ -8,6 +8,7 @@ import PyInstaller.utils.hooks
 
 binaries = []
 binaries += PyInstaller.utils.hooks.collect_dynamic_libs("scipy")
+print(binaries)
 
 block_cipher = None
 
@@ -18,6 +19,7 @@ datas += PyInstaller.utils.hooks.collect_data_files("cellprofiler")
 datas += PyInstaller.utils.hooks.collect_data_files("javabridge")
 datas += PyInstaller.utils.hooks.collect_data_files("prokaryote")
 datas += PyInstaller.utils.hooks.collect_data_files("skimage.io._plugins")
+datas += PyInstaller.utils.hooks.collect_data_files("scipy.libs")
 
 datas += [
     ("../../cellprofiler/data/images/*", "cellprofiler/data/images"),
