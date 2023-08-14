@@ -4,7 +4,7 @@ EXAMPLE_CDN = https://github.com/CellProfiler/examples/archive/master.zip
 # Public gold output files
 S3_GOLD = https://s3.amazonaws.com/cellprofiler-examples/example-human-gold-standard
 
-VERSION := 4.2.5
+VERSION := 4.2.6
 
 TAG := latest
 
@@ -60,4 +60,4 @@ test: input output output/gold data input/filelist.txt AS_09125_050116030001_D03
 		--file-list=/input/filelist.txt
 	
 	# Compare gold files against output that was run.
-	python -c "import imageio.v3 as iio; import numpy as np; im1 = iio.imread('output/AS_09125_050116030001_D03f00d0_Overlay.png'); im2 = iio.imread('output/gold/AS_09125_050116030001_D03f00d0_Overlay.png'); res = np.array_equal(im1, im2) and exit() ; exit(1)"
+	python -c "import imageio.v3 as iio; import numpy as np; im1 = iio.imread('output/AS_09125_050116030001_D03f00d0_Overlay.png'); im2 = iio.imread('output/gold/AS_09125_050116030001_D03f00d0_Overlay.png'); res = np.array_equal(im1, im2) and exit() ; exit(1) "
