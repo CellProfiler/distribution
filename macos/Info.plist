@@ -53,6 +53,8 @@
 	<dict>
 		<key>JAVA_HOME</key>
 		<string>./Contents</string>
+		<key>LANG</key>
+		<string>en_US.UTF-8</string>
 	</dict>
 <key>NSHighResolutionCapable</key>
     <true/>
