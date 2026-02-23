@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>
+      CellProfiler Flatpak Repository
+    </title>
+  </head>
+  <body>
+    <h1>
+      CellProfiler Flatpak Repository
+    </h1>
+    <br/>
+    <h2>
+      Installation
+    </h2>
+    <p>
+    To add this repository to your Flatpak setup, run the following command:
+    </p>
+    <p>
+      <code>
+        flatpak remote-add --if-not-exists cp-42x-dev https://gnodar01.github.io/cp-42x-dev/index.flatpakrepo
+      </code>
+    </p>
+    <p>
+      Alternatively, download the <a href="https://gnodar01.github.io/cp-42x-dev/index.flatpakrepo">repo file</a> and add it manually:
+    </p>
+    <p>
+      <code>
+        flatpak remote-add --if-not-exists cp-42x-dev ./index.flatpakrepo
+      </code>
+    </p>
+    <p>
+    Then, to install CellProfiler:
+    </p>
+    <p>
+      <code>
+        flatpak install org.cellprofiler.CellProfiler
+      </code>
+    </p>
+  </body>
+</html>

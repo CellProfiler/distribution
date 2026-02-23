@@ -84,3 +84,7 @@ target/
 var/
 venv/
 wheels/
+linux/environment.sh
+linux/repo/
+linux/builddir/
+linux/.flatpak-builder/
