@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ARG version=4.2.8
+ARG version=4.2.8.1
 
 RUN apt update
 RUN apt -y upgrade
