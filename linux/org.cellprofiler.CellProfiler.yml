@@ -64,7 +64,10 @@ modules:
         branch: 4.2.x
         dest: distribution
 finish-args:
-  - --socket=wayland
+  # No --socket=wayland: GTK3's Wayland drag-and-drop segfaults when files are
+  # dropped on the Images tab (CellProfiler#5232). Unfixed as of GTK 3.24.52,
+  # and GTK3 upstream is security-fix-only. Withholding the wayland socket makes
+  # fallback-x11 take effect, and XWayland's drag-and-drop is unaffected.
   - --socket=fallback-x11
   - --device=dri
   - --share=ipc
