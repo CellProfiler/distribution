@@ -33,8 +33,8 @@ modules:
       # - ${FLATPAK_DEST}/activate.sh python -m compileall ${FLATPAK_DEST}/env/lib/python3.9/site-packages/
       # install app metadata, desktop entry, and icon
       - mkdir -p /app/share/{icons/hicolor/scalable/apps,metainfo,applications}
-      # - cp frontend/cellprofiler/data/icons/CellProfiler-favicon-128.png /app/share/icons/hicolor/128x128/apps/org.cellprofiler.CellProfiler.png
       - cp frontend/cellprofiler/data/icons/CellProfiler_square.svg /app/share/icons/hicolor/scalable/apps/org.cellprofiler.CellProfiler.svg
+      - for s in 16 24 32 48 64 128 256 512; do install -Dm0644 distribution/linux/icons/hicolor/${s}x${s}/org.cellprofiler.CellProfiler.png /app/share/icons/hicolor/${s}x${s}/apps/org.cellprofiler.CellProfiler.png; done
       - cp distribution/linux/org.cellprofiler.CellProfiler.metainfo.xml /app/share/metainfo/org.cellprofiler.CellProfiler.metainfo.xml
       - cp distribution/linux/org.cellprofiler.CellProfiler.desktop /app/share/applications/org.cellprofiler.CellProfiler.desktop
     sources:
