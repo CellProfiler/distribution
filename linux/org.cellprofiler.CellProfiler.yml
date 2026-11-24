@@ -52,12 +52,11 @@ modules:
         dest: javabridge
       - type: git
         url: https://github.com/CellProfiler/core.git
-        branch: 4.2.x
+        tag: v4.2.9
         dest: core
       - type: git
         url: https://github.com/CellProfiler/CellProfiler.git
-        branch: 4.2.x
-        commit: f4e51a537a1d9578daeacbbb46916bbb91f6df66
+        tag: v4.2.9
         dest: frontend
       - type: git
         url: https://github.com/CellProfiler/distribution.git
